@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val LOG_TAG = "LOG_TAG"
     private val gameField = mutableListOf<List<Int>>()
     private val ceils = mutableListOf<List<Button>>()
+    private val numberButtons = mutableListOf<Button>()
     private var selectedCeilIndex: Pair<*, *>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,11 +41,16 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
+        numberButtons.addAll(
+            listOf(button_clear, button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9)
+        )
+
         fillGameField()
         debugPrintGameField()
 
 //        createGameFieldViews()
         initCeils()
+        initNumberButtons()
 
         button_cancel.setOnClickListener {
             buttons_panel.visibility = View.INVISIBLE
@@ -90,6 +96,37 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun initNumberButtons() {
+        for (i in numberButtons.indices) {
+            numberButtons[i].tag = i
+            numberButtons[i].setOnClickListener {
+                numberButtonClicked(it)
+            }
+        }
+    }
+
+    private fun numberButtonClicked(view: View) {
+//        Toast.makeText(applicationContext, "${view.tag}", Toast.LENGTH_SHORT).show()
+
+        if (selectedCeilIndex != null) {
+            val i = selectedCeilIndex?.first as Int
+            val j = selectedCeilIndex?.second as Int
+
+            val tag = view.tag.toString()
+            // TODO: 21.08.21 заменить в массиве
+//            gameField[i]
+            if (tag == "0") {
+                ceils[i][j].text = ""
+            } else {
+                ceils[i][j].text = tag
+            }
+
+            ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
+            selectedCeilIndex = null
+        }
+        buttons_panel.visibility = View.INVISIBLE
     }
 
     private fun ceilClicked(view: View) {
