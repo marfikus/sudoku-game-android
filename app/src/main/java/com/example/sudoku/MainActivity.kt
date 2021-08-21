@@ -2,7 +2,6 @@ package com.example.sudoku
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
@@ -11,12 +10,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mainViewModel: MainViewModel
-
-    private val LOG_TAG = "LOG_TAG"
-    private val gameField = mutableListOf<MutableList<Int>>()
     private val ceils = mutableListOf<List<Button>>()
     private val numberButtons = mutableListOf<Button>()
-    private var selectedCeilIndex: Pair<*, *>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,62 +32,51 @@ class MainActivity : AppCompatActivity() {
                 listOf(ceil_80, ceil_81, ceil_82, ceil_83, ceil_84, ceil_85, ceil_86, ceil_87, ceil_88)                
             )
         )
+        initCeils()
 
         numberButtons.addAll(
             listOf(button_clear, button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9)
         )
-
-        fillGameField()
-        debugPrintGameField()
-
-//        createGameFieldViews()
-        initCeils()
         initNumberButtons()
 
         button_cancel.setOnClickListener {
             buttons_panel.visibility = View.INVISIBLE
 
+            val selectedCeilIndex = mainViewModel.selectedCeilIndex
             if (selectedCeilIndex != null) {
-                val i = selectedCeilIndex?.first as Int
-                val j = selectedCeilIndex?.second as Int
+                val i = selectedCeilIndex.first as Int
+                val j = selectedCeilIndex.second as Int
                 ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
-                selectedCeilIndex = null
+                mainViewModel.selectedCeilIndex = null
             }
         }
-    }
 
-    private fun fillGameField() {
-        for (blk in 1..3) {
-            for (str in blk..9 step 3) {
-                val list = mutableListOf<Int>()
-                for (i in 0..8) {
-                    val n = str + i
-                    if (n > 9) list.add(n - 9) else list.add(n)
-                }
-                gameField.add(list)
-            }
-        }
-    }
-
-    private fun debugPrintGameField() {
-        var result = " \n"
-        gameField.forEach {
-            result += "$it\n"
-        }
-        Log.d(LOG_TAG, result)
+        mainViewModel.printGameField()
     }
 
     private fun initCeils() {
-
         for (i in ceils.indices) {
             for (j in ceils[i].indices) {
-                ceils[i][j].text = gameField[i][j].toString()
+                val value = mainViewModel.getFieldValue(i, j).toString()
+                if (value == "0") {
+                    ceils[i][j].text = ""
+                } else {
+                    ceils[i][j].text = value
+                }
                 ceils[i][j].tag = Pair(i, j)
                 ceils[i][j].setOnClickListener {
                     ceilClicked(it)
                 }
             }
         }
+    }
+
+    private fun ceilClicked(view: View) {
+//        Toast.makeText(applicationContext, "${(view.tag as Pair<*, *>).second}", Toast.LENGTH_SHORT).show()
+        view.setBackgroundColor(resources.getColor(R.color.black))
+        // TODO: 21.08.21 определить дефолтный цвет кнопки, чтобы потом его вернуть
+        buttons_panel.visibility = View.VISIBLE
+        mainViewModel.selectedCeilIndex = (view.tag as Pair<*, *>)
     }
 
     private fun initNumberButtons() {
@@ -107,12 +91,13 @@ class MainActivity : AppCompatActivity() {
     private fun numberButtonClicked(view: View) {
 //        Toast.makeText(applicationContext, "${view.tag}", Toast.LENGTH_SHORT).show()
 
+        val selectedCeilIndex = mainViewModel.selectedCeilIndex
         if (selectedCeilIndex != null) {
-            val i = selectedCeilIndex?.first as Int
-            val j = selectedCeilIndex?.second as Int
+            val i = selectedCeilIndex.first as Int
+            val j = selectedCeilIndex.second as Int
 
             val tag = view.tag.toString()
-            gameField[i][j] = tag.toInt()
+            mainViewModel.updateFieldValue(i, j, tag.toInt())
             if (tag == "0") {
                 ceils[i][j].text = ""
             } else {
@@ -120,17 +105,10 @@ class MainActivity : AppCompatActivity() {
             }
 
             ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
-            selectedCeilIndex = null
+            mainViewModel.selectedCeilIndex = null
         }
         buttons_panel.visibility = View.INVISIBLE
-    }
-
-    private fun ceilClicked(view: View) {
-//        Toast.makeText(applicationContext, "${(view.tag as Pair<*, *>).second}", Toast.LENGTH_SHORT).show()
-        view.setBackgroundColor(resources.getColor(R.color.black))
-        // TODO: 21.08.21 определить дефолтный цвет кнопки, чтобы потом его вернуть
-        buttons_panel.visibility = View.VISIBLE
-        selectedCeilIndex = (view.tag as Pair<*, *>)
+        mainViewModel.printGameField()
     }
 
 }
