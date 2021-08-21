@@ -1,24 +1,19 @@
 package com.example.sudoku
 
-import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.InputFilter
-import android.text.InputType
 import android.util.Log
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var mainViewModel: MainViewModel
+
     private val LOG_TAG = "LOG_TAG"
-    private val gameField = mutableListOf<List<Int>>()
+    private val gameField = mutableListOf<MutableList<Int>>()
     private val ceils = mutableListOf<List<Button>>()
     private val numberButtons = mutableListOf<Button>()
     private var selectedCeilIndex: Pair<*, *>? = null
@@ -26,6 +21,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        mainViewModel = (application as App).mainViewModel
 
         ceils.addAll(
             listOf(
@@ -115,8 +112,7 @@ class MainActivity : AppCompatActivity() {
             val j = selectedCeilIndex?.second as Int
 
             val tag = view.tag.toString()
-            // TODO: 21.08.21 заменить в массиве
-//            gameField[i]
+            gameField[i][j] = tag.toInt()
             if (tag == "0") {
                 ceils[i][j].text = ""
             } else {
@@ -135,37 +131,6 @@ class MainActivity : AppCompatActivity() {
         // TODO: 21.08.21 определить дефолтный цвет кнопки, чтобы потом его вернуть
         buttons_panel.visibility = View.VISIBLE
         selectedCeilIndex = (view.tag as Pair<*, *>)
-    }
-
-    private fun createGameFieldViews() {
-
-        for (i in 0..8) {
-            val linLayoutHor = LinearLayout(this)
-            var linLayoutHorPar = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            linLayoutHor.orientation = LinearLayout.HORIZONTAL
-            linLayoutHor.layoutParams = linLayoutHorPar
-
-            for (j in 0..8) {
-                val button = Button(this)
-                var params = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-                )
-//                params.setMargins(10, 10, 0, 0)
-
-                button.layoutParams = params
-//                editText.inputType = InputType.TYPE_CLASS_NUMBER
-//                editText.filters = arrayOf(InputFilter.LengthFilter(1))
-                button.text = gameField[i][j].toString()
-
-                linLayoutHor.addView(button)
-            }
-
-            ceils_field.addView(linLayoutHor)
-        }
     }
 
 }
