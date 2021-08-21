@@ -1,5 +1,7 @@
 package com.example.sudoku
 
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputFilter
@@ -18,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val LOG_TAG = "LOG_TAG"
     private val gameField = mutableListOf<List<Int>>()
     private val ceils = mutableListOf<List<Button>>()
+    private var selectedCeilIndex: Pair<*, *>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +45,17 @@ class MainActivity : AppCompatActivity() {
 
 //        createGameFieldViews()
         initCeils()
+
+        button_cancel.setOnClickListener {
+            buttons_panel.visibility = View.INVISIBLE
+
+            if (selectedCeilIndex != null) {
+                val i = selectedCeilIndex?.first as Int
+                val j = selectedCeilIndex?.second as Int
+                ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
+                selectedCeilIndex = null
+            }
+        }
     }
 
     private fun fillGameField() {
@@ -79,9 +93,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ceilClicked(view: View) {
-        Toast.makeText(applicationContext, "${(view.tag as Pair<*, *>).second}", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(applicationContext, "${(view.tag as Pair<*, *>).second}", Toast.LENGTH_SHORT).show()
         view.setBackgroundColor(resources.getColor(R.color.black))
+        // TODO: 21.08.21 определить дефолтный цвет кнопки, чтобы потом его вернуть
         buttons_panel.visibility = View.VISIBLE
+        selectedCeilIndex = (view.tag as Pair<*, *>)
     }
 
     private fun createGameFieldViews() {
