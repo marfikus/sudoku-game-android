@@ -7,6 +7,108 @@
     android:id="@+id/rootLayout"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linLayoutVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
 <!--    <EditText
         android:id="@+id/editTextNumber11"
         android:layout_width="wrap_content"
@@ -311,16 +413,6 @@
         app:layout_constraintStart_toEndOf="@id/editTextNumber38"
         app:layout_constraintTop_toTopOf="@id/editTextNumber31" />-->
 
-    <LinearLayout
-        android:id="@+id/linLayoutVer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
 
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
