@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,8 +9,8 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linLayoutVer"
-        android:layout_width="wrap_content"
+        android:id="@+id/ceils_field"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,315 +105,858 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_68"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_73"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_74"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_76"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_77"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_78"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ceil_80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_84"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_85"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_86"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_87"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/ceil_88"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
 
-
-<!--    <EditText
-        android:id="@+id/editTextNumber11"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/buttons_panel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <EditText
-        android:id="@+id/editTextNumber12"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/button_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="9" />
+
+        </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber11"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber11" />
+        android:layout_marginHorizontal="5dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
 
-    <EditText
-        android:id="@+id/editTextNumber13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber12"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber11" />
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Clear" />
 
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Cancel" />
 
-    <EditText
-        android:id="@+id/editTextNumber14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber13"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber11" />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextNumber15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber14"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber11" />
-
-    <EditText
-        android:id="@+id/editTextNumber16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber15"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber11" />
-
-
-    <EditText
-        android:id="@+id/editTextNumber17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber16"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber11" />
-
-    <EditText
-        android:id="@+id/editTextNumber18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber17"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber11" />
-
-    <EditText
-        android:id="@+id/editTextNumber19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber18"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber11" />
-
-
-    <EditText
-        android:id="@+id/editTextNumber21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="@id/editTextNumber11"
-        app:layout_constraintTop_toBottomOf="@id/editTextNumber11" />
-
-    <EditText
-        android:id="@+id/editTextNumber22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber21"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber21" />
-
-    <EditText
-        android:id="@+id/editTextNumber23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber22"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber21" />
-
-
-    <EditText
-        android:id="@+id/editTextNumber24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber23"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber21" />
-
-    <EditText
-        android:id="@+id/editTextNumber25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber24"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber21" />
-
-    <EditText
-        android:id="@+id/editTextNumber26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber25"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber21" />
-
-
-    <EditText
-        android:id="@+id/editTextNumber27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber26"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber21" />
-
-    <EditText
-        android:id="@+id/editTextNumber28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber27"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber21" />
-
-    <EditText
-        android:id="@+id/editTextNumber29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber28"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber21" />
-
-
-    <EditText
-        android:id="@+id/editTextNumber31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="@id/editTextNumber21"
-        app:layout_constraintTop_toBottomOf="@id/editTextNumber21" />
-
-    <EditText
-        android:id="@+id/editTextNumber32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber31"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber31" />
-
-    <EditText
-        android:id="@+id/editTextNumber33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber32"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber31" />
-
-
-    <EditText
-        android:id="@+id/editTextNumber34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber33"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber31" />
-
-    <EditText
-        android:id="@+id/editTextNumber35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber34"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber31" />
-
-    <EditText
-        android:id="@+id/editTextNumber36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber35"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber31" />
-
-
-    <EditText
-        android:id="@+id/editTextNumber37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber36"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber31" />
-
-    <EditText
-        android:id="@+id/editTextNumber38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber37"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber31" />
-
-    <EditText
-        android:id="@+id/editTextNumber39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:maxLength="1"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@id/editTextNumber38"
-        app:layout_constraintTop_toTopOf="@id/editTextNumber31" />-->
-
-
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
