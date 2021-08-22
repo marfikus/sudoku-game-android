@@ -10,16 +10,20 @@ class Game {
 
     private val gameField = mutableListOf<MutableList<Int>>()
     private lateinit var initialGameField: List<List<Int>>
-    private val hidedCeils = mutableListOf<Pair<Int, Int>>()
+    private val initialHidedCeils = mutableListOf<Pair<Int, Int>>()
 
     fun start() {
         fillGameField()
         initialGameField = gameField.map { it.toList() }
+        Log.d(LOG_TAG, gameFieldSolved().toString())
         mixGameField()
-        hideSomeCeils(20)
+        hideSomeCeils(2)
+        Log.d(LOG_TAG, gameFieldSolved().toString())
     }
 
     fun getValue(i: Int, j: Int): Int = gameField[i][j]
+
+    fun getInitialHidedCeilsCount() = initialHidedCeils.size
 
     fun updateValue(i: Int, j: Int, value: Int) {
         gameField[i][j] = value
@@ -35,7 +39,7 @@ class Game {
         Log.d(LOG_TAG, result)
     }
 
-    fun isHided(i: Int, j: Int) = Pair(i, j) in hidedCeils
+    fun isHided(i: Int, j: Int) = Pair(i, j) in initialHidedCeils
 
     private fun fillGameField() {
         for (block in 1..3) {
@@ -62,7 +66,9 @@ class Game {
             if (gameField[i][j] == 0) continue
             gameField[i][j] = 0
             hided++
-            hidedCeils.add(Pair(i, j))
+            initialHidedCeils.add(Pair(i, j))
         }
     }
+
+    fun gameFieldSolved() = gameField == initialGameField
 }

@@ -2,6 +2,7 @@ package com.example.sudoku
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -117,6 +118,16 @@ class MainActivity : AppCompatActivity() {
 
         hideButtonsPanel()
         mainViewModel.debugPrintGameField()
+
+        checkGameField()
+    }
+
+    private fun checkGameField() {
+        if (!mainViewModel.existEmptyCeils()) {
+            if (mainViewModel.gameFieldSolved()) {
+                Toast.makeText(applicationContext, "Solved!", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun showButtonsPanel() {

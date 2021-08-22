@@ -5,15 +5,26 @@ import androidx.lifecycle.ViewModel
 class MainViewModel(private val game: Game) : ViewModel() {
 
     private var selectedCeilIndex: Pair<*, *>? = null
+    private var emptyCeilsCount = 0
 
     fun init() {
         game.start()
+        emptyCeilsCount = game.getInitialHidedCeilsCount()
     }
-
+    
     fun getFieldValue(i: Int, j: Int): Int = game.getValue(i, j)
 
-    fun updateFieldValue(i: Int, j: Int, value: Int) {
-        game.updateValue(i, j, value)
+    fun updateFieldValue(i: Int, j: Int, newValue: Int) {
+        val oldValue = game.getValue(i, j)
+        if (newValue != oldValue) {
+            if (newValue == 0) {
+                emptyCeilsCount++
+            } else {
+                emptyCeilsCount--
+            }
+            game.updateValue(i, j, newValue)
+        }
+
     }
 
     fun existSelectedCeil() = selectedCeilIndex != null
@@ -36,5 +47,9 @@ class MainViewModel(private val game: Game) : ViewModel() {
     }
 
     fun isHidedCeil(i: Int, j: Int) = game.isHided(i, j)
+
+    fun existEmptyCeils() = emptyCeilsCount > 0
+
+    fun gameFieldSolved() = game.gameFieldSolved()
 
 }
