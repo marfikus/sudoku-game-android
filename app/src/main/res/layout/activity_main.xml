@@ -846,7 +846,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="1" />
+                android:text="@string/_1" />
 
             <Button
                 android:id="@+id/button_2"
@@ -856,7 +856,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="2" />
+                android:text="@string/_2" />
 
             <Button
                 android:id="@+id/button_3"
@@ -866,7 +866,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="3" />
+                android:text="@string/_3" />
 
             <Button
                 android:id="@+id/button_4"
@@ -876,7 +876,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="4" />
+                android:text="@string/_4" />
 
             <Button
                 android:id="@+id/button_5"
@@ -886,7 +886,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="5" />
+                android:text="@string/_5" />
 
             <Button
                 android:id="@+id/button_6"
@@ -896,7 +896,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="6" />
+                android:text="@string/_6" />
 
             <Button
                 android:id="@+id/button_7"
@@ -906,7 +906,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="7" />
+                android:text="@string/_7" />
 
             <Button
                 android:id="@+id/button_8"
@@ -916,7 +916,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="8" />
+                android:text="@string/_8" />
 
             <Button
                 android:id="@+id/button_9"
@@ -926,7 +926,7 @@
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="9" />
+                android:text="@string/_9" />
 
         </LinearLayout>
 
@@ -945,7 +945,7 @@
             android:padding="0dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:text="Clear" />
+            android:text="@string/clear" />
 
         <Button
             android:id="@+id/button_cancel"
@@ -955,7 +955,7 @@
             android:padding="0dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:text="Cancel" />
+            android:text="@string/cancel" />
 
     </LinearLayout>
 

@@ -7,7 +7,7 @@ class MainViewModel(private val game: Game) : ViewModel() {
     private var selectedCeilIndex: Pair<*, *>? = null
 
     fun init() {
-        game.fillGameField()
+        game.start()
     }
 
     fun getFieldValue(i: Int, j: Int): Int = game.getValue(i, j)
