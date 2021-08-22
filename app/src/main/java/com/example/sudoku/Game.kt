@@ -34,5 +34,4 @@ class Game {
         }
         Log.d(LOG_TAG, result)
     }
-
 }

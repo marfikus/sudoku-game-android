@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -40,18 +41,21 @@ class MainActivity : AppCompatActivity() {
         initNumberButtons()
 
         button_cancel.setOnClickListener {
-            buttons_panel.visibility = View.INVISIBLE
+            if (!mainViewModel.existSelectedCeil()) return@setOnClickListener
 
-            val selectedCeilIndex = mainViewModel.selectedCeilIndex
-            if (selectedCeilIndex != null) {
-                val i = selectedCeilIndex.first as Int
-                val j = selectedCeilIndex.second as Int
-                ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
-                mainViewModel.selectedCeilIndex = null
-            }
+            buttons_panel.visibility = View.INVISIBLE
+            val index = mainViewModel.getSelectedCeilIndex()
+            ceils[index.first][index.second].setBackgroundColor(resources.getColor(R.color.purple_200))
+            mainViewModel.unselectCeil()
         }
 
-        mainViewModel.printGameField()
+        if (mainViewModel.existSelectedCeil()) {
+            val index = mainViewModel.getSelectedCeilIndex()
+            ceils[index.first][index.second].setBackgroundColor(resources.getColor(R.color.black))
+            buttons_panel.visibility = View.VISIBLE
+        }
+
+        mainViewModel.debugPrintGameField()
     }
 
     private fun initCeils() {
@@ -72,11 +76,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ceilClicked(view: View) {
-//        Toast.makeText(applicationContext, "${(view.tag as Pair<*, *>).second}", Toast.LENGTH_SHORT).show()
+        if (mainViewModel.existSelectedCeil()) {
+            button_cancel.performClick()
+        }
+
         view.setBackgroundColor(resources.getColor(R.color.black))
         // TODO: 21.08.21 определить дефолтный цвет кнопки, чтобы потом его вернуть
         buttons_panel.visibility = View.VISIBLE
-        mainViewModel.selectedCeilIndex = (view.tag as Pair<*, *>)
+        mainViewModel.selectCeil(view.tag as Pair<*, *>)
     }
 
     private fun initNumberButtons() {
@@ -89,26 +96,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun numberButtonClicked(view: View) {
-//        Toast.makeText(applicationContext, "${view.tag}", Toast.LENGTH_SHORT).show()
+        if (!mainViewModel.existSelectedCeil()) return
 
-        val selectedCeilIndex = mainViewModel.selectedCeilIndex
-        if (selectedCeilIndex != null) {
-            val i = selectedCeilIndex.first as Int
-            val j = selectedCeilIndex.second as Int
+        val i = mainViewModel.getSelectedCeilIndex().first
+        val j = mainViewModel.getSelectedCeilIndex().second
 
-            val tag = view.tag.toString()
-            mainViewModel.updateFieldValue(i, j, tag.toInt())
-            if (tag == "0") {
-                ceils[i][j].text = ""
-            } else {
-                ceils[i][j].text = tag
-            }
-
-            ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
-            mainViewModel.selectedCeilIndex = null
+        val tag = view.tag.toString()
+        mainViewModel.updateFieldValue(i, j, tag.toInt())
+        if (tag == "0") {
+            ceils[i][j].text = ""
+        } else {
+            ceils[i][j].text = tag
         }
+
+        ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
+        mainViewModel.unselectCeil()
+
         buttons_panel.visibility = View.INVISIBLE
-        mainViewModel.printGameField()
+        mainViewModel.debugPrintGameField()
     }
 
 }
