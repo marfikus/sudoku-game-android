@@ -48,7 +48,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_03"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -75,7 +75,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_06"
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -137,7 +137,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_13"
@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -164,7 +164,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_16"
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -199,6 +199,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal">
 
             <Button
@@ -226,7 +227,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_23"
@@ -234,7 +235,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -253,7 +254,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_26"
@@ -261,7 +262,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -315,7 +316,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_33"
@@ -323,7 +324,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -342,7 +343,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_36"
@@ -350,7 +351,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -404,7 +405,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_43"
@@ -412,7 +413,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -431,7 +432,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_46"
@@ -439,7 +440,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -466,6 +467,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal">
 
             <Button
@@ -493,7 +495,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_53"
@@ -501,7 +503,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -520,7 +522,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_56"
@@ -528,7 +530,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -582,7 +584,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_63"
@@ -590,7 +592,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -609,7 +611,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_66"
@@ -617,7 +619,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -671,7 +673,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_73"
@@ -679,7 +681,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -698,7 +700,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_76"
@@ -706,7 +708,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -760,7 +762,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_83"
@@ -768,7 +770,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button
@@ -787,7 +789,7 @@
                 android:layout_weight="1"
                 android:padding="0dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/ceil_86"
@@ -795,7 +797,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="0dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="5dp" />
 
             <Button

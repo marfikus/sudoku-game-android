@@ -15,10 +15,10 @@ class Game {
     fun start() {
         fillGameField()
         initialGameField = gameField.map { it.toList() }
-        Log.d(LOG_TAG, gameFieldSolved().toString())
+//        Log.d(LOG_TAG, gameFieldSolved().toString())
         mixGameField()
-        hideSomeCeils(2)
-        Log.d(LOG_TAG, gameFieldSolved().toString())
+        hideSomeCeils(10)
+//        Log.d(LOG_TAG, gameFieldSolved().toString())
     }
 
     fun getValue(i: Int, j: Int): Int = gameField[i][j]
