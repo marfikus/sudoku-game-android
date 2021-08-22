@@ -13,12 +13,12 @@ class Game {
     private val initialHidedCeils = mutableListOf<Pair<Int, Int>>()
 
     fun start() {
+        gameField.clear()
+        initialHidedCeils.clear()
         fillGameField()
         initialGameField = gameField.map { it.toList() }
-//        Log.d(LOG_TAG, gameFieldSolved().toString())
         mixGameField()
-        hideSomeCeils(10)
-//        Log.d(LOG_TAG, gameFieldSolved().toString())
+        hideSomeCeils(2)
     }
 
     fun getValue(i: Int, j: Int): Int = gameField[i][j]

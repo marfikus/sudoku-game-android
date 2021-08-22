@@ -126,6 +126,7 @@ class MainActivity : AppCompatActivity() {
         if (!mainViewModel.existEmptyCeils()) {
             if (mainViewModel.gameFieldSolved()) {
                 Toast.makeText(applicationContext, "Solved!", Toast.LENGTH_SHORT).show()
+                newGame()
             }
         }
     }
@@ -150,5 +151,9 @@ class MainActivity : AppCompatActivity() {
         ceils[i][j].background.setTint(resources.getColor(R.color.unselected_ceil))
     }
 
+    private fun newGame() {
+        mainViewModel.init()
+        initCeils()
+    }
 
 }

@@ -10,6 +10,7 @@ class MainViewModel(private val game: Game) : ViewModel() {
     fun init() {
         game.start()
         emptyCeilsCount = game.getInitialHidedCeilsCount()
+        selectedCeilIndex = null
     }
     
     fun getFieldValue(i: Int, j: Int): Int = game.getValue(i, j)
