@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     ceils[i][j].text = value
                 }
+                ceils[i][j].isEnabled = mainViewModel.isHidedCeil(i, j)
                 ceils[i][j].tag = Pair(i, j)
                 ceils[i][j].setOnClickListener {
                     ceilClicked(it)
