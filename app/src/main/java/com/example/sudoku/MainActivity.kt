@@ -43,16 +43,16 @@ class MainActivity : AppCompatActivity() {
         button_cancel.setOnClickListener {
             if (!mainViewModel.existSelectedCeil()) return@setOnClickListener
 
-            buttons_panel.visibility = View.INVISIBLE
+            hideButtonsPanel()
             val index = mainViewModel.getSelectedCeilIndex()
-            ceils[index.first][index.second].setBackgroundColor(resources.getColor(R.color.purple_200))
+            unselectCeil(index.first, index.second)
             mainViewModel.unselectCeil()
         }
 
         if (mainViewModel.existSelectedCeil()) {
             val index = mainViewModel.getSelectedCeilIndex()
-            ceils[index.first][index.second].setBackgroundColor(resources.getColor(R.color.black))
-            buttons_panel.visibility = View.VISIBLE
+            selectCeil(index.first, index.second)
+            showButtonsPanel()
         }
 
         mainViewModel.debugPrintGameField()
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
         view.setBackgroundColor(resources.getColor(R.color.black))
         // TODO: 21.08.21 определить дефолтный цвет кнопки, чтобы потом его вернуть
-        buttons_panel.visibility = View.VISIBLE
+        showButtonsPanel()
         mainViewModel.selectCeil(view.tag as Pair<*, *>)
     }
 
@@ -109,11 +109,28 @@ class MainActivity : AppCompatActivity() {
             ceils[i][j].text = tag
         }
 
-        ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
+        unselectCeil(i, j)
         mainViewModel.unselectCeil()
 
-        buttons_panel.visibility = View.INVISIBLE
+        hideButtonsPanel()
         mainViewModel.debugPrintGameField()
     }
+
+    private fun showButtonsPanel() {
+        buttons_panel.visibility = View.VISIBLE
+    }
+
+    private fun hideButtonsPanel() {
+        buttons_panel.visibility = View.INVISIBLE
+    }
+
+    private fun selectCeil(i: Int, j: Int) {
+        ceils[i][j].setBackgroundColor(resources.getColor(R.color.black))
+    }
+
+    private fun unselectCeil(i: Int, j: Int) {
+        ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
+    }
+
 
 }
