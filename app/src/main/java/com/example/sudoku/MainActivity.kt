@@ -75,6 +75,7 @@ class MainActivity : AppCompatActivity() {
                     ceilClicked(it)
                 }
                 unselectCeil(i, j)
+                ceils[i][j].setTextColor(resources.getColor(R.color.white))
             }
         }
     }
@@ -148,7 +149,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun unselectCeil(i: Int, j: Int) {
-        ceils[i][j].background.setTint(resources.getColor(R.color.unselected_ceil))
+        if (mainViewModel.isHidedCeil(i, j)) {
+            ceils[i][j].background.setTint(resources.getColor(R.color.unselected_hided_ceil))
+        } else {
+            ceils[i][j].background.setTint(resources.getColor(R.color.unselected_ceil))
+        }
     }
 
     private fun newGame() {

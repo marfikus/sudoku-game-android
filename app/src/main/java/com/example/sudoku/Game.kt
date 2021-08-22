@@ -18,7 +18,7 @@ class Game {
         fillGameField()
         initialGameField = gameField.map { it.toList() }
         mixGameField()
-        hideSomeCeils(2)
+        hideSomeCeils(20)
     }
 
     fun getValue(i: Int, j: Int): Int = gameField[i][j]
@@ -58,9 +58,9 @@ class Game {
 
     }
 
-    private fun hideSomeCeils(n: Int) {
+    private fun hideSomeCeils(count: Int) {
         var hided = 0
-        while (hided != n) {
+        while (hided != count) {
             val i = Random.nextInt(gameField.indices)
             val j = Random.nextInt(gameField[i].indices)
             if (gameField[i][j] == 0) continue
