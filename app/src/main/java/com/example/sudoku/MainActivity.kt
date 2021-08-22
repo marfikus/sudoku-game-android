@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
             unselectCeil(index.first, index.second)
             mainViewModel.unselectCeil()
         }
+        button_cancel.background.setTint(resources.getColor(R.color.selected_ceil))
 
         if (mainViewModel.existSelectedCeil()) {
             val index = mainViewModel.getSelectedCeilIndex()
@@ -71,6 +72,7 @@ class MainActivity : AppCompatActivity() {
                 ceils[i][j].setOnClickListener {
                     ceilClicked(it)
                 }
+                unselectCeil(i, j)
             }
         }
     }
@@ -80,10 +82,9 @@ class MainActivity : AppCompatActivity() {
             button_cancel.performClick()
         }
 
-        view.setBackgroundColor(resources.getColor(R.color.black))
-        // TODO: 21.08.21 определить дефолтный цвет кнопки, чтобы потом его вернуть
-        showButtonsPanel()
+        selectCeil(view)
         mainViewModel.selectCeil(view.tag as Pair<*, *>)
+        showButtonsPanel()
     }
 
     private fun initNumberButtons() {
@@ -92,6 +93,7 @@ class MainActivity : AppCompatActivity() {
             numberButtons[i].setOnClickListener {
                 numberButtonClicked(it)
             }
+            numberButtons[i].background.setTint(resources.getColor(R.color.selected_ceil))
         }
     }
 
@@ -125,11 +127,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectCeil(i: Int, j: Int) {
-        ceils[i][j].setBackgroundColor(resources.getColor(R.color.black))
+        ceils[i][j].background.setTint(resources.getColor(R.color.selected_ceil))
+    }
+
+    private fun selectCeil(view: View) {
+        view.background.setTint(resources.getColor(R.color.selected_ceil))
     }
 
     private fun unselectCeil(i: Int, j: Int) {
-        ceils[i][j].setBackgroundColor(resources.getColor(R.color.purple_200))
+        ceils[i][j].background.setTint(resources.getColor(R.color.unselected_ceil))
     }
 
 
