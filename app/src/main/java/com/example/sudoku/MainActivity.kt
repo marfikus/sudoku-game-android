@@ -57,6 +57,8 @@ class MainActivity : AppCompatActivity() {
             showButtonsPanel()
         }
 
+        checkGameField()
+
 //        mainViewModel.debugPrintGameField()
     }
 
@@ -124,12 +126,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkGameField() {
+        hideSolvedBanner()
         if (!mainViewModel.existEmptyCeils()) {
             if (mainViewModel.gameFieldSolved()) {
-                Toast.makeText(applicationContext, "Solved!", Toast.LENGTH_SHORT).show()
-                newGame()
+//                Toast.makeText(applicationContext, "Solved!", Toast.LENGTH_SHORT).show()
+                showSolvedBanner()
+//                newGame()
             }
         }
+    }
+
+    private fun showSolvedBanner() {
+        solved_banner.visibility = View.VISIBLE
+    }
+
+    private fun hideSolvedBanner() {
+        solved_banner.visibility = View.INVISIBLE
     }
 
     private fun showButtonsPanel() {

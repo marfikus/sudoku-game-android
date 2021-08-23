@@ -20,7 +20,7 @@ class Game {
         gameField = mixGameField(gameField)
         initialGameField = gameField.map { it.toList() }
 
-        gameField = hideSomeCeils(gameField, 20)
+        gameField = hideSomeCeils(gameField, 2)
     }
 
     fun getValue(i: Int, j: Int): Int = gameField[i][j]
