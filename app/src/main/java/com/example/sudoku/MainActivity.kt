@@ -3,6 +3,9 @@ package com.example.sudoku
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -60,6 +63,18 @@ class MainActivity : AppCompatActivity() {
         checkGameField()
 
 //        mainViewModel.debugPrintGameField()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_activity, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.new_game -> newGame()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun initCeils() {
@@ -169,6 +184,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun newGame() {
+        hideSolvedBanner()
+        hideButtonsPanel()
         mainViewModel.init()
         initCeils()
     }
