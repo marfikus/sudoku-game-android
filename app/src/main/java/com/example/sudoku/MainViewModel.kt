@@ -44,7 +44,6 @@ class MainViewModel(private val game: Game) : ViewModel() {
 
     fun debugPrintGameField() {
         game.debugPrintGameField()
-        game.debugPrintGameField("initial")
     }
 
     fun isHidedCeil(i: Int, j: Int) = game.isHided(i, j)

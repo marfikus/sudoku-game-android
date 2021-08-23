@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             showButtonsPanel()
         }
 
-        mainViewModel.debugPrintGameField()
+//        mainViewModel.debugPrintGameField()
     }
 
     private fun initCeils() {
