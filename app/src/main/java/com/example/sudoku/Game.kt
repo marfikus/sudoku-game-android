@@ -11,6 +11,7 @@ class Game {
     private var gameField = mutableListOf<MutableList<Int>>()
     private lateinit var initialGameField: List<List<Int>>
     private val initialHidedCeils = mutableListOf<Pair<Int, Int>>()
+    private var difficultyLevel: Int = 0
 
     fun start() {
         gameField.clear()
@@ -20,7 +21,13 @@ class Game {
         gameField = mixGameField(gameField)
         initialGameField = gameField.map { it.toList() }
 
-        gameField = hideSomeCeils(gameField, 2)
+        gameField = hideSomeCeils(gameField, difficultyLevel)
+    }
+
+    fun getDifficultyLevel(): Int = difficultyLevel
+
+    fun setDifficultyLevel(value: Int) {
+        difficultyLevel = value
     }
 
     fun getValue(i: Int, j: Int): Int = gameField[i][j]

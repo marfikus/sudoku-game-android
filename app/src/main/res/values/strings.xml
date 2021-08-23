@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Sudoku</string>
+    <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
     <string name="clear">Clear</string>
     <string name="_9">9</string>
@@ -13,4 +14,6 @@
     <string name="_1">1</string>
     <string name="solved">Game solved!</string>
     <string name="new_game">New game</string>
+    <string name="change_difficulty">Change difficulty</string>
+    <string name="diff_dialog_title">Set difficulty level (0–40)</string>
 </resources>

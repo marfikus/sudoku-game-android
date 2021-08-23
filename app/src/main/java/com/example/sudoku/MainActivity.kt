@@ -2,15 +2,14 @@ package com.example.sudoku
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
+private const val DIFFICULTY_DIALOG = "DIFFICULTY_DIALOG"
 
 class MainActivity : AppCompatActivity() {
 
@@ -73,8 +72,17 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.new_game -> newGame()
+            R.id.change_difficulty -> {
+                ChangeDifficultyDialogFragment
+                        .newInstance(mainViewModel.getDifficultyLevel())
+                        .show(supportFragmentManager, DIFFICULTY_DIALOG)
+            }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    fun changeDifficulty(newValue: Int) {
+        mainViewModel.setDifficultyLevel(newValue)
     }
 
     private fun initCeils() {
@@ -188,6 +196,7 @@ class MainActivity : AppCompatActivity() {
         hideButtonsPanel()
         mainViewModel.init()
         initCeils()
+        checkGameField()
     }
 
 }

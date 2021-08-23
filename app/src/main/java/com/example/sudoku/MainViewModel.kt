@@ -6,11 +6,20 @@ class MainViewModel(private val game: Game) : ViewModel() {
 
     private var selectedCeilIndex: Pair<*, *>? = null
     private var emptyCeilsCount = 0
+    private var difficultyLevel = 20
 
     fun init() {
+        game.setDifficultyLevel(difficultyLevel)
         game.start()
         emptyCeilsCount = game.getInitialHidedCeilsCount()
         selectedCeilIndex = null
+    }
+
+    fun getDifficultyLevel(): Int = difficultyLevel
+
+    fun setDifficultyLevel(value: Int) {
+        difficultyLevel = value
+        game.setDifficultyLevel(value)
     }
     
     fun getFieldValue(i: Int, j: Int): Int = game.getValue(i, j)
