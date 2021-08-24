@@ -9,14 +9,17 @@ class MainViewModel(private val game: Game) : ViewModel() {
     private var difficultyLevel = 20
 
     fun init() {
-        // TODO: 23.08.21 загрузка уровня сложности из настроек
+        // TODO: 23.08.21 загрузка уровня сложности из настроек и сохранение
         game.setDifficultyLevel(difficultyLevel)
         game.start()
         emptyCeilsCount = game.getInitialHidedCeilsCount()
         selectedCeilIndex = null
     }
 
-    fun getDifficultyLevel(): Int = difficultyLevel
+    fun getDifficultyLevel(): Int {
+        difficultyLevel = game.getDifficultyLevel()
+        return difficultyLevel
+    }
 
     fun setDifficultyLevel(value: Int) {
         difficultyLevel = value

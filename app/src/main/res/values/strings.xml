@@ -15,5 +15,5 @@
     <string name="solved">Game solved!</string>
     <string name="new_game">New game</string>
     <string name="change_difficulty">Change difficulty</string>
-    <string name="diff_dialog_title">Set difficulty level (0–40)</string>
+    <string name="diff_dialog_title">Set difficulty level (0–81)</string>
 </resources>

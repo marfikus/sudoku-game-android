@@ -1,6 +1,8 @@
 package com.example.sudoku
 
 import android.util.Log
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -17,17 +19,23 @@ class Game {
         gameField.clear()
         initialHidedCeils.clear()
 
+
         gameField = fillGameField(gameField)
         gameField = mixGameField(gameField)
+//        gameField = generateGameField(gameField)  // experimental
         initialGameField = gameField.map { it.toList() }
-
         gameField = hideSomeCeils(gameField, difficultyLevel)
     }
 
     fun getDifficultyLevel(): Int = difficultyLevel
 
     fun setDifficultyLevel(value: Int) {
-        difficultyLevel = value
+        val maxValue = 81
+        difficultyLevel = if (value > maxValue) {
+            maxValue
+        } else {
+            value
+        }
     }
 
     fun getValue(i: Int, j: Int): Int = gameField[i][j]
@@ -48,6 +56,111 @@ class Game {
     }
 
     fun isHided(i: Int, j: Int) = Pair(i, j) in initialHidedCeils
+
+    // TODO: 24.08.2021
+    //  экспериментальный вариант, пока работает не корректно.
+    //  Не получается набрать матрицу уникальную просто перебором рандомного списка вариантов.
+    //  Надо другой алгоритм гуглить...
+    private fun generateGameField(
+        gameField: MutableList<MutableList<Int>>
+    ): MutableList<MutableList<Int>> {
+
+        fun notInString(str: Int, value: Int): Boolean {
+            for (col in gameField[str].indices) {
+                if (gameField[str][col] == value) {
+                    return false
+                }
+            }
+            return true
+        }
+
+        fun notInColumn(col: Int, value: Int): Boolean {
+            for (str in gameField.indices) {
+                if (gameField[str][col] == value) {
+                    return false
+                }
+            }
+            return true
+        }
+
+        fun notInSquare(str: Int, col: Int, value: Int): Boolean {
+
+            fun detectSquare(str: Int, col: Int): MutableMap<String, Int> {
+                val result = mutableMapOf<String, Int>()
+
+                when {
+                    str <= 2 -> {
+                        result["y1"] = 0
+                        result["y2"] = 2
+                    }
+                    str in 3..5 -> {
+                        result["y1"] = 3
+                        result["y2"] = 5
+                    }
+                    str > 5 -> {
+                        result["y1"] = 6
+                        result["y2"] = 8
+                    }
+                }
+
+                when {
+                    col <= 2 -> {
+                        result["x1"] = 0
+                        result["x2"] = 2
+                    }
+                    col in 3..5 -> {
+                        result["x1"] = 3
+                        result["x2"] = 5
+                    }
+                    col > 5 -> {
+                        result["x1"] = 6
+                        result["x2"] = 8
+                    }
+                }                
+
+                return result
+            }
+
+            val square = detectSquare(str, col)
+            for (i in square["y1"]!!..square["y2"]!!) {
+                for (j in square["x1"]!!..square["x2"]!!) {
+                    if (gameField[i][j] == value) {
+                        return false
+                    }
+                }
+            }
+            return true
+        }
+
+        repeat(9) { gameField.add(Array(9) { 0 }.toMutableList()) }
+
+        var numbers = (1..9).toMutableList()
+        val firstString = mutableListOf<Int>()
+        repeat(9) { firstString.add(numbers.removeAt(Random.nextInt(numbers.indices))) }
+        gameField[0] = firstString
+        debugPrintGameField(gameField)
+
+        val values = mutableListOf<Int>()
+        for (str in 1..8) {
+            numbers = (1..9).toMutableList()
+            repeat(9) { values.add(numbers.removeAt(Random.nextInt(numbers.indices))) }
+            for (col in 0..8) {
+                forValues@ for(value in values) {
+                    if (notInString(str, value)
+                            && notInColumn(col, value)
+                            && notInSquare(str, col, value)) {
+                        gameField[str][col] = value
+                        values.remove(value)
+                        break@forValues
+                    }
+                }
+            }
+            debugPrintGameField(gameField)
+        }
+
+        debugPrintGameField(gameField)
+        return gameField
+    }
 
     private fun fillGameField(
         gameField: MutableList<MutableList<Int>>
