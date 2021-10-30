@@ -20,9 +20,9 @@ class Game {
         initialHidedCeils.clear()
 
 
-        gameField = fillGameField(gameField)
-        gameField = mixGameField(gameField)
-//        gameField = generateGameField(gameField)  // experimental
+//        gameField = fillGameField(gameField)
+//        gameField = mixGameField(gameField)
+        gameField = generateGameField(gameField)  // experimental
         initialGameField = gameField.map { it.toList() }
         gameField = hideSomeCeils(gameField, difficultyLevel)
     }
@@ -135,6 +135,33 @@ class Game {
         repeat(9) { gameField.add(Array(9) { 0 }.toMutableList()) }
 
         var numbers = (1..9).toMutableList()
+        repeat (9) {
+            Log.d(LOG_TAG, numbers.toString())
+//            val index = Random.nextInt(numbers.indices)
+//            val number = numbers[index]
+            val number = numbers.random()
+            for (str in 0..8) {
+                for (col in gameField[str].indices) {
+//                    val col = Random.nextInt(gameField[str].indices)
+                    if ((gameField[str][col] == 0)
+                            && notInString(str, number)
+                            && notInColumn(col, number)
+                            && notInSquare(str, col, number)) {
+
+                        gameField[str][col] = number
+                        numbers.remove(number)
+                        break
+                    }
+                }
+
+            }
+
+            debugPrintGameField(gameField)
+        }
+
+
+
+/*        var numbers = (1..9).toMutableList()
         val firstString = mutableListOf<Int>()
         repeat(9) { firstString.add(numbers.removeAt(Random.nextInt(numbers.indices))) }
         gameField[0] = firstString
@@ -156,9 +183,9 @@ class Game {
                 }
             }
             debugPrintGameField(gameField)
-        }
+        }*/
 
-        debugPrintGameField(gameField)
+//        debugPrintGameField(gameField)
         return gameField
     }
 
