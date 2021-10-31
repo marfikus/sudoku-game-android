@@ -20,9 +20,9 @@ class Game {
         initialHidedCeils.clear()
 
 
-//        gameField = fillGameField(gameField)
-//        gameField = mixGameField(gameField)
-        gameField = generateGameField(gameField)  // experimental
+        gameField = fillGameField(gameField)
+        gameField = mixGameField(gameField)
+//        gameField = generateGameField(gameField)  // experimental
         initialGameField = gameField.map { it.toList() }
         gameField = hideSomeCeils(gameField, difficultyLevel)
     }
@@ -313,6 +313,29 @@ class Game {
 
             return mixedGameField
         }
+        
+        fun changeDigitsInStrings(
+                gameFieldStrings: MutableList<MutableList<Int>>,
+                times: Int
+        ): MutableList<MutableList<Int>> {
+
+            repeat(times) {
+                val digits = (1..9).toMutableList()
+                val firstDigit = digits.random()
+                digits.remove(firstDigit)
+                val secondDigit = digits.random()
+//                Log.d(LOG_TAG, "$firstDigit, $secondDigit")
+
+                for (str in gameFieldStrings) {
+                    val firstDigitIndex = str.indexOf(firstDigit)
+                    val secondDigitIndex = str.indexOf(secondDigit)
+                    str[firstDigitIndex] = secondDigit
+                    str[secondDigitIndex] = firstDigit
+                }
+            }
+
+            return gameFieldStrings
+        }
 
         var gameFieldBlocks: MutableList<MutableList<MutableList<Int>>>
         var mixedGameField = mutableListOf<MutableList<Int>>()
@@ -320,7 +343,7 @@ class Game {
 
         debugPrintGameField(gameField)
 //        mixedGameField = transpose(gameField)
-        for (i in 0..x) {
+/*        for (i in 0..x) {
             gameFieldBlocks = createBlocksView(gameField, "columns")
             gameFieldBlocks = mixBlocks(gameFieldBlocks)
             gameFieldBlocks = mixStringsInBlocks(gameFieldBlocks)
@@ -332,11 +355,12 @@ class Game {
             gameFieldBlocks = mixStringsInBlocks(gameFieldBlocks)
             mixedGameField = createStringsView(gameFieldBlocks)
 //            mixedGameField = transpose(mixedGameField)
-        }
+        }*/
 
 //        debugPrintGameField(mixedGameField)
 //        mixedGameField = mixStrings(mixedGameField)
 //        mixedGameField = transpose(mixedGameField)
+        mixedGameField = changeDigitsInStrings(gameField, 10)
         debugPrintGameField(mixedGameField)
         return mixedGameField
     }
