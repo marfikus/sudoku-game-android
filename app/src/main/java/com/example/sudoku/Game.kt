@@ -57,10 +57,8 @@ class Game {
 
     fun isHided(i: Int, j: Int) = Pair(i, j) in initialHidedCeils
 
-    // TODO: 24.08.2021
-    //  экспериментальный вариант, пока работает не корректно.
-    //  Не получается набрать матрицу уникальную просто перебором рандомного списка вариантов.
-    //  Надо другой алгоритм гуглить...
+    // TODO: экспериментальный вариант, генерирующий сразу рандомное поле.
+    //  Пока не работает, как надо)
     private fun generateGameField(
         gameField: MutableList<MutableList<Int>>
     ): MutableList<MutableList<Int>> {
