@@ -8,8 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="unselected_ceil">#4CAF50</color>
-    <color name="unselected_hided_ceil">#CDDC39</color>
+    <color name="unselected_ceil">#B24CAF50</color>
+    <color name="unselected_hided_ceil">#B2CDDC39</color>
     <color name="selected_ceil">#009688</color>
     <color name="default_color">#009688</color>
 </resources>

@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.unselectCeil()
         }
         button_cancel.background.setTint(resources.getColor(R.color.selected_ceil))
+        button_cancel.textSize = 16f
+        button_clear.textSize = 16f
 
         if (mainViewModel.existSelectedCeil()) {
             val index = mainViewModel.getSelectedCeilIndex()
@@ -101,6 +103,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 unselectCeil(i, j)
                 ceils[i][j].setTextColor(resources.getColor(R.color.white))
+                ceils[i][j].textSize = 24f
             }
         }
     }
@@ -122,6 +125,7 @@ class MainActivity : AppCompatActivity() {
                 numberButtonClicked(it)
             }
             numberButtons[i].background.setTint(resources.getColor(R.color.selected_ceil))
+            numberButtons[i].textSize = 24f
         }
     }
 
