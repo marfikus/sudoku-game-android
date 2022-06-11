@@ -7,7 +7,6 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import androidx.core.content.getSystemService
 import androidx.fragment.app.DialogFragment
 import java.lang.IllegalStateException
 
@@ -34,8 +33,10 @@ class ChangeDifficultyDialogFragment : DialogFragment() {
             builder.setView(view)
                     .setTitle(getString(R.string.diff_dialog_title))
                     .setPositiveButton(R.string.ok) { dialog, _ ->
-                        // TODO: 23.08.21 проверить ввод
-                        (activity as MainActivity).changeDifficulty(diffDialogInput?.text.toString().toInt())
+                        val value = diffDialogInput?.text.toString().trim()
+                        if (value.isNotEmpty()) {
+                            (activity as MainActivity).changeDifficultyAndRestart(value.toInt())
+                        }
                         dialog.cancel()
                     }
                     .setNegativeButton(R.string.cancel) { dialog, _ ->

@@ -83,8 +83,9 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun changeDifficulty(newValue: Int) {
+    fun changeDifficultyAndRestart(newValue: Int) {
         mainViewModel.setDifficultyLevel(newValue)
+        newGame()
     }
 
     private fun initCeils() {
