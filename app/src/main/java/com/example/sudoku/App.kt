@@ -9,7 +9,10 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        mainViewModel = MainViewModel(Game())
+        mainViewModel = MainViewModel(
+            Game(),
+            AppSettings(applicationContext)
+        )
         mainViewModel.init()
     }
 }
