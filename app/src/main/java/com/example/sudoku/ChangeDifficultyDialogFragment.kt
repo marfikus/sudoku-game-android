@@ -3,6 +3,7 @@ package com.example.sudoku
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -35,16 +36,24 @@ class ChangeDifficultyDialogFragment : DialogFragment() {
                     .setPositiveButton(R.string.ok) { dialog, _ ->
                         // TODO: 23.08.21 проверить ввод
                         (activity as MainActivity).changeDifficulty(diffDialogInput?.text.toString().toInt())
-                        hideKeyboard()
                         dialog.cancel()
                     }
                     .setNegativeButton(R.string.cancel) { dialog, _ ->
-                        hideKeyboard()
                         dialog.cancel()
                     }
             builder.create()
 
         } ?: throw IllegalStateException("activity cannot be null")
+    }
+
+    override fun onCancel(dialog: DialogInterface) {
+        hideKeyboard()
+        super.onCancel(dialog)
+    }
+
+    override fun onPause() {
+        dialog?.cancel()
+        super.onPause()
     }
 
     private fun showKeyboard() {
