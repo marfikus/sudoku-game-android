@@ -1,4 +1,4 @@
-package com.example.sudoku
+package com.marfikus.sudoku
 
 import android.app.AlertDialog
 import android.app.Dialog

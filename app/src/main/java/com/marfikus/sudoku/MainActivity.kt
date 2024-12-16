@@ -1,4 +1,4 @@
-package com.example.sudoku
+package com.marfikus.sudoku
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 private const val DIFFICULTY_DIALOG = "DIFFICULTY_DIALOG"

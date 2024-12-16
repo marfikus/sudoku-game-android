@@ -1,8 +1,6 @@
-package com.example.sudoku
+package com.marfikus.sudoku
 
 import android.util.Log
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import kotlin.random.Random
 import kotlin.random.nextInt
 
