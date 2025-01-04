@@ -4,4 +4,4 @@
 
 Минимальная поддерживаемая версия ОС Android: 6.0 (Marshmallow)
 
-[Ссылка для загрузки установочного APK-файла](https://github.com/marfikus/sudoku-game-android/releases/download/v.1.0.1/sudoku_1.0.1.apk)
+Скачать установочный APK-файл можно [здесь](https://github.com/marfikus/sudoku-game-android/releases/)
